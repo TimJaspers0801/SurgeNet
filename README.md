@@ -25,7 +25,7 @@ Our results show that using solely procedure-specific
 data can lead to improvements of 13.8%, 9.5%, and 36.8% compared to ImageNet
 pretraining. Extending this data with more heterogeneous surgical data further
 increased performance by 5.0%, 5.2%, and 2.5%, suggesting that increasing diversity
-within SSL data is beneficial for modelperformance.
+within SSL data is beneficial for model performance.
 
 ## Models
 The models used in this study are based on the [MetaFormer](https://arxiv.org/abs/2210.13452) architecture. The models are trained using a self-supervised learning approach on the SurgeNet
