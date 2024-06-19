@@ -50,7 +50,7 @@ from MetaFormer import caformer_s18, MetaFormerFPN
 # load the weights
 weights = torch.load('path/to/weights.pth')
 
-# Just the backbone
+# classification model
 classification_model = caformer_s18()
 classification_model.load_state_dict(weights)
 
