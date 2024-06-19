@@ -51,11 +51,11 @@ from MetaFormer import caformer_s18, MetaFormerFPN
 weights = torch.load('path/to/weights.pth')
 
 # classification model
-classification_model = caformer_s18()
+classification_model = caformer_s18(num_classes=12, pretrained='SurgeNet')
 classification_model.load_state_dict(weights)
 
 # Full segmentation model
-segmentation_model = MetaFormerFPN(weights=weights)
+segmentation_model = MetaFormerFPN(num_classes=12, pretrained='SurgeNet', weights=weights)
 
 ```
 
