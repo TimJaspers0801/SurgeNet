@@ -31,17 +31,17 @@ within SSL data is beneficial for model performance.
 The models used in this study are based on the [MetaFormer](https://arxiv.org/abs/2210.13452) architecture. The models are trained using a self-supervised learning approach on the SurgeNet
 dataset, introduced this [paper](https://). All model weights can be downloaded from the table below.
 
-| Model           | Epochs | Download Link                                                                                                                                     |
-|-----------------|--------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| SurgeNet        | 25     | [Download Weights](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_checkpoint_epoch0025_teacher.pth?download=true)      |
-| SurgeNet-Small  | 50     | [Download Weights](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNetSmall_checkpoint_epoch0050_teacher.pth?download=true) |
-| SurgeNet-CHOLEC | 50     | [Download Weights](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/CHOLEC_checkpoint_epoch0050_teacher.pth?download=true)        |
-| SurgeNet-RAMIE  | 50     | [Download Weights](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/RAMIE_checkpoint_epoch0050_teacher.pth?download=true)         |
-| SurgeNet-RARP   | 50     | [Download Weights](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/RARP_checkpoint_epoch0050_teacher.pth?download=true)          | 
+| Model           | Epochs | Teacher Backbone                                                                                                                          | Full DINO checkpoint                                                                                                                 |
+|-----------------|--------|-------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| SurgeNet        | 25     | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_checkpoint_epoch0025_teacher.pth?download=true)      | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_checkpoint0025.pth?download=true) |
+| SurgeNet-Small  | 50     | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNetSmall_checkpoint_epoch0050_teacher.pth?download=true) | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNetSmall_checkpoint0050.pth?download=true) |
+| SurgeNet-CHOLEC | 50     | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/CHOLEC_checkpoint_epoch0050_teacher.pth?download=true)        | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/CHOLEC_checkpoint0050.pth?download=true) | 
+| SurgeNet-RAMIE  | 50     | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/RAMIE_checkpoint_epoch0050_teacher.pth?download=true)         | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/RAMIE_checkpoint0050.pth?download=true) | 
+| SurgeNet-RARP   | 50     | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/RARP_checkpoint_epoch0050_teacher.pth?download=true)          | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/RARP_checkpoint0050.pth?download=true) |
 
 
 ## Loading Model
-The models can be loaded using the following code snippet:
+The weights from the teacher network can be used to initialize either your classification or segmentation model using the following code snippet:
 
 ```python
 import torch
