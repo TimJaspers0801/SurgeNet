@@ -28,8 +28,36 @@ increased performance by 5.0%, 5.2%, and 2.5%, suggesting that increasing divers
 within SSL data is beneficial for modelperformance.
 
 ## Models
-The models used in this study are based on the [MetaFormer](https://) architecture. The models are trained using a self-supervised learning approach on the [SurgeNet](https://)
-dataset, introduced in [paper](https://).
+The models used in this study are based on the [MetaFormer](https://arxiv.org/abs/2210.13452) architecture. The models are trained using a self-supervised learning approach on the SurgeNet
+dataset, introduced this [paper](https://). All model weights can be downloaded from the table below.
+
+| Model           | Epochs | Download Link                                                                                                                                     |
+|-----------------|--------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| SurgeNet        | 25     | [Download Weights](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_checkpoint_epoch0025_teacher.pth?download=true)      |
+| SurgeNet-Small  | 50     | [Download Weights](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNetSmall_checkpoint_epoch0050_teacher.pth?download=true) |
+| SurgeNet-CHOLEC | 50     | [Download Weights](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/CHOLEC_checkpoint_epoch0050_teacher.pth?download=true)        |
+| SurgeNet-RAMIE  | 50     | [Download Weights](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/RAMIE_checkpoint_epoch0050_teacher.pth?download=true)         |
+| SurgeNet-RARP   | 50     | [Download Weights](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/RARP_checkpoint_epoch0050_teacher.pth?download=true)          | 
+
+
+## Loading Model
+The models can be loaded using the following code snippet:
+
+```python
+import torch
+from MetaFormer import caformer_s18, MetaFormerFPN
+
+# load the weights
+weights = torch.load('path/to/weights.pth')
+
+# Just the backbone
+classification_model = caformer_s18()
+classification_model.load_state_dict(weights)
+
+# Full segmentation model
+segmentation_model = MetaFormerFPN(weights=weights)
+
+```
 
 ## Acknowledgements
 
