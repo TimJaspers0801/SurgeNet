@@ -52,7 +52,7 @@ weights = torch.load('path/to/weights.pth')
 
 # classification model
 classification_model = caformer_s18(num_classes=12, pretrained='SurgeNet')
-classification_model.load_state_dict(weights)
+classification_model.load_state_dict(weights, strict=False)
 
 # Full segmentation model
 segmentation_model = MetaFormerFPN(num_classes=12, pretrained='SurgeNet', weights=weights)
