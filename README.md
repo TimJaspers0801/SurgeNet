@@ -60,7 +60,8 @@ segmentation_model = MetaFormerFPN(num_classes=12, pretrained='SurgeNet', weight
 ```
 
 ## Acknowledgements
-
+Our implementation of the feature pyramid network is based on the [pytorch segmentation models](https://segmentation-modelspytorch.readthedocs.io/en/latest/) library.
+Pretraining on SurgeNet was performed using the code provided with the [DINO](https://github.com/facebookresearch/dino) publication.
 
 ## Citation
 If you find our work useful in your research please consider citing our paper:
