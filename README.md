@@ -22,7 +22,7 @@ The obtained results show that using solely procedure-specific data can lead to 
 ther increases performance by 5.0%, 5.2%, and 2.5%, suggesting that increasing diversity within SSL data is beneficial for model performance.
 
 ## Results
-Figure below shows the performance of the models trained on different datasets for the three downstream tasks. The models trained on the more diverse CHOLEC dataset outperform the models trained on the more specific RAMIE and RARP datasets. The models trained on the SurgeNet dataset, which is a combination of the three datasets, outperform all other models.
+Figure below shows the performance of the models trained on different datasets for the three downstream dataset each from a unique procedure. 
 ![FIG 2.](figures/Results_SurgeNet.svg)
 
 ## Models
