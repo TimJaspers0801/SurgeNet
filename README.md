@@ -1,5 +1,5 @@
 # SurgeNet
-![FIG 5.](figures/SurgeNet.png)
+![FIG 1.](figures/SurgeNet.png)
 
 ## Publications
 This repository contains code for the models used in the following publications:
@@ -20,6 +20,10 @@ field of surgical computer vision is abundant, the diversity within this data is
 SSL for surgical computer vision, comparing procedure-specific datasets against a more heterogeneous general surgical dataset across three different downstream surgical applications. 
 The obtained results show that using solely procedure-specific data can lead to substantial improvements of 13.8%, 9.5%, and 36.8% compared to ImageNet pretraining. However, extending this data with more heterogeneous surgical data fur-
 ther increases performance by 5.0%, 5.2%, and 2.5%, suggesting that increasing diversity within SSL data is beneficial for model performance.
+
+## Results
+Figure below shows the performance of the models trained on different datasets for the three downstream tasks. The models trained on the more diverse CHOLEC dataset outperform the models trained on the more specific RAMIE and RARP datasets. The models trained on the SurgeNet dataset, which is a combination of the three datasets, outperform all other models.
+![FIG 2.](figures/Results_SurgeNet.svg)
 
 ## Models
 The models used in this study are based on the [MetaFormer](https://arxiv.org/abs/2210.13452) architecture. The models are trained using a self-supervised learning approach on the SurgeNet
