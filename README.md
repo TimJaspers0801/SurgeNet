@@ -39,17 +39,22 @@ The weights from the teacher network can be used to initialize either your class
 
 ```python
 import torch
-from MetaFormer import caformer_s18, MetaFormerFPN
+from metaformer import caformer_s18, MetaFormerFPN
 
-# load the weights
-weights = torch.load('path/to/weights.pth')
+urls = {
+    "caformer_s18": "https://huggingface.co/sail/dl/resolve/main/caformer/caformer_s18.pth",
+    "SurgeNet": "https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_checkpoint_epoch0025_teacher.pth?download=true",
+    "SurgeNet-Small": "https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNetSmall_checkpoint_epoch0050_teacher.pth?download=true",
+    "SurgeNet-CHOLEC": "https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/CHOLEC_checkpoint_epoch0050_teacher.pth?download=true",
+    "SurgeNet-RAMIE": "https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/RAMIE_checkpoint_epoch0050_teacher.pth?download=true",
+    "SurgeNet-RARP": "https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/RARP_checkpoint_epoch0050_teacher.pth?download=true"
+}
 
 # classification model
-classification_model = caformer_s18(num_classes=12, pretrained='SurgeNet')
-classification_model.load_state_dict(weights, strict=False)
+classification_model = caformer_s18(num_classes=12, pretrained='SurgeNet', pretrained_weights=urls['SurgeNet'])
 
 # Full segmentation model
-segmentation_model = MetaFormerFPN(num_classes=12, pretrained='SurgeNet', weights=weights)
+segmentation_model = MetaFormerFPN(num_classes=4, pretrained='SurgeNet', pretrained_weights=urls['SurgeNet'])
 
 ```
 

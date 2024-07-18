@@ -29,11 +29,11 @@ import os
 """" DEFINE METAFORMER-FPN MODEL"""
 """""" """""" """""" """""" """""" """"""
 class MetaFormerFPN(nn.Module):
-    def __init__(self, num_classes=1, pretrained='ImageNet', weights=None):
+    def __init__(self, num_classes=1, pretrained='ImageNet', pretrained_weights=None):
         super().__init__()
 
         # Implement backbone architecture
-        self.metaformer = caformer_s18(num_classes=num_classes, pretrained=pretrained, weights=weights)
+        self.metaformer = caformer_s18(num_classes=num_classes, pretrained=pretrained, pretrained_weights=pretrained_weights)
 
 
         feature_channels = (64, 128, 320, 512)
@@ -52,7 +52,7 @@ class MetaFormerFPN(nn.Module):
 
     def forward(self, x):
         # Produce encoder output
-        features = self.metaformer(x)
+        x, features = self.metaformer.forward_features(x)
 
         # Produce decoder output
         seg = self.FPN(*features)
@@ -553,6 +553,7 @@ class MetaFormer(nn.Module):
         res_scale_init_values=[None, None, 1.0, 1.0],
         output_norm=partial(nn.LayerNorm, eps=1e-6),
         head_fn=nn.Linear,
+        pretrained_weights=None,
         **kwargs,
     ):
         super().__init__()
@@ -611,12 +612,15 @@ class MetaFormer(nn.Module):
 
         self.norm = output_norm(dims[-1])
 
-        # if head_dropout > 0.0:
-        #     self.head = head_fn(dims[-1], num_classes, head_dropout=head_dropout)
-        # else:
-        #     self.head = head_fn(dims[-1], num_classes)
+        if head_dropout > 0.0:
+            self.head = head_fn(dims[-1], num_classes, head_dropout=head_dropout)
+        else:
+            self.head = head_fn(dims[-1], num_classes)
 
         self.apply(self._init_weights)
+
+        if pretrained_weights is not None:
+            self.load_pretrained_weights(pretrained_weights)
 
     def _init_weights(self, m):
         if isinstance(m, (nn.Conv2d, nn.Linear)):
@@ -641,13 +645,26 @@ class MetaFormer(nn.Module):
 
     def forward(self, x):
         x, features = self.forward_features(x) #x, features = self.forward_features(x)
-        #x = self.head(x)
-        return features
+        x = self.head(x)
+        return x
+
+    def load_pretrained_weights(self, url):
+        # Download the weights using torch.hub
+        pretrained_dict = torch.hub.load_state_dict_from_url(url)
+
+        # remove classification head weights
+        pretrained_dict = {k: v for k, v in pretrained_dict.items() if not k.startswith("head.")}
+
+        msg = self.load_state_dict(pretrained_dict, strict=False)
+
+        print('Weights loaded from url:', url)
+        print('Check if weights are loaded successfully: ', msg)
 
 
 """DEPTHWISE SEPARABLE CONVOLUTION AND ATTENTION AS TOKEN MIXER"""
 
-def caformer_s18(num_classes=0, pretrained='ImageNet', weights=None, **kwargs):
+def caformer_s18(num_classes=0, pretrained='ImageNet', pretrained_weights=None, **kwargs):
+    print(pretrained_weights)
     if pretrained == 'ImageNet':
         model = MetaFormer(
             in_chans=3,
@@ -664,20 +681,12 @@ def caformer_s18(num_classes=0, pretrained='ImageNet', weights=None, **kwargs):
             res_scale_init_values=[None, None, 1.0, 1.0],
             output_norm=partial(nn.LayerNorm, eps=1e-6),
             head_fn=MlpHead,
+            pretrained_weights=pretrained_weights,
             **kwargs,
         )
 
-        url = urls["caformer_s18"]
-        # url = urls['caformer_s18_in21ft1k']
-        # url = urls['caformer_s18_in21k']
 
-        print('Loading ImageNet Weights in CAFormer with StarReLU...')
-        state_dict = torch.hub.load_state_dict_from_url(url=url, map_location="cpu", check_hash=True)
-        del state_dict["head.fc2.weight"]
-        del state_dict["head.fc2.bias"]
-        model.load_state_dict(state_dict, False)
-
-    elif pretrained == 'SurgNet':
+    elif pretrained == 'SurgeNet':
         model = MetaFormer(
             in_chans=3,
             num_classes=num_classes,
@@ -698,12 +707,9 @@ def caformer_s18(num_classes=0, pretrained='ImageNet', weights=None, **kwargs):
             res_scale_init_values=[None, None, 1.0, 1.0],
             output_norm=partial(nn.LayerNorm, eps=1e-6),
             head_fn=MlpHead,
+            pretrained_weights=pretrained_weights,
             **kwargs,
         )
-        # GastroNet pretrained weights
-        print('Loading DINO Default SurgNet Weights in CAFormer with ReLU...')
-        msg = model.load_state_dict(weights, False)
-        print('CAFormer weights loaded:', msg)
 
     return model
 
@@ -896,21 +902,21 @@ class FPN(nn.Module):
 
 urls = {
     "caformer_s18": "https://huggingface.co/sail/dl/resolve/main/caformer/caformer_s18.pth",
-    "caformer_s18_in21ft1k": "https://huggingface.co/sail/dl/resolve/main/caformer/caformer_s18_in21ft1k.pth",
-    "caformer_s18_in21k": "https://huggingface.co/sail/dl/resolve/main/caformer/caformer_s18_in21k.pth",
+    "SurgeNet": "https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_checkpoint_epoch0025_teacher.pth?download=true",
+    "SurgeNet-Small": "https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNetSmall_checkpoint_epoch0050_teacher.pth?download=true",
+    "SurgeNet-CHOLEC": "https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/CHOLEC_checkpoint_epoch0050_teacher.pth?download=true",
+    "SurgeNet-RAMIE": "https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/RAMIE_checkpoint_epoch0050_teacher.pth?download=true",
+    "SurgeNet-RARP": "https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/RARP_checkpoint_epoch0050_teacher.pth?download=true"
 }
+
 
 if __name__ == "__main__":
     # For CAFormer
-    model = caformer_s18(num_classes=4, pretrained='SurgeNet')
-    weights = "E:\SurgNet2M_models\weights\SurgNet2M\caformer0100.pth"
-    weights = torch.load(weights)
+    model = caformer_s18(num_classes=4, pretrained='SurgeNet', pretrained_weights=urls['SurgeNet'])
     dummy = torch.zeros([12, 3, 256, 256])
     out = model(dummy)
 
     # For Full Segmentation model
-    weights = "E:\SurgNet2M_models\weights\SurgNet2M\caformer0100.pth"
-    weights = torch.load(weights)
-    model = MetaFormerFPN(num_classes=4, pretrained='SurgNet', weights=weights).cuda() # pretrained {ImageNet, SurgNet}
+    model = MetaFormerFPN(num_classes=4, pretrained='SurgeNet', pretrained_weights=urls['SurgeNet']).cuda() # pretrained {ImageNet, SurgNet}
     dummy = torch.zeros([12, 3, 256, 256]).cuda()
     out = model(dummy)
