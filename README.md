@@ -39,8 +39,7 @@ dataset, introduced this [paper](https://). All model weights can be downloaded 
 
 
 ## Loading Model
-The weights from the teacher network can be used to initialize either your classification or segmentation model using the following code snippet:
-
+The weights from the teacher network can be used to initialize either your classification or segmentation model using the following code snippet: 
 ```python
 import torch
 from metaformer import caformer_s18, MetaFormerFPN
@@ -61,7 +60,7 @@ classification_model = caformer_s18(num_classes=12, pretrained='SurgeNet', pretr
 segmentation_model = MetaFormerFPN(num_classes=4, pretrained='SurgeNet', pretrained_weights=urls['SurgeNet'])
 
 ```
-
+Note: If your want a different version of SurgeNet weights (e.g. SurgeNet-Small), you can replace the `pretrained_weights` argument with the desired url (leave the `pretrained` argument as it is).
 ## Acknowledgements
 Our implementation of the feature pyramid network is based on the [pytorch segmentation models](https://segmentation-modelspytorch.readthedocs.io/en/latest/) library.
 Pretraining on SurgeNet was performed using the code provided with the [DINO](https://github.com/facebookresearch/dino) publication.
