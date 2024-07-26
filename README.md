@@ -4,9 +4,9 @@
 ## Publications
 This repository contains code for the models used in the following publications:
 
-- [Tim J.M. Jaspers *et al.*](https://) - Exploring the Effect of Dataset Diversity in
+- [Tim J.M. Jaspers *et al.*](https://arxiv.org/abs/2407.17904) - Exploring the Effect of Dataset Diversity in
 Self-Supervised Learning for Surgical Computer
-Vision (*Data Engineering in Medical Imaging (DEMI) - Satellite Event MICCAI 2024*)
+Vision (*accepted - Data Engineering in Medical Imaging (DEMI) - Satellite Event MICCAI 2024*)
 
   
 ## Abstract
@@ -67,3 +67,14 @@ Pretraining on SurgeNet was performed using the code provided with the [DINO](ht
 
 ## Citation
 If you find our work useful in your research please consider citing our paper:
+```bibtex
+@misc{jaspers2024datasetdiversity,
+      title={Exploring the Effect of Dataset Diversity in Self-Supervised Learning for Surgical Computer Vision}, 
+      author={Tim J. M. Jaspers and Ronald L. P. D. de Jong and Yasmina Al Khalil and Tijn Zeelenberg and Carolus H. J. Kusters and Yiping Li and Romy C. van Jaarsveld and Franciscus H. A. Bakker and Jelle P. Ruurda and Willem M. Brinkman and Peter H. N. De With and Fons van der Sommen},
+      year={2024},
+      eprint={2407.17904},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2407.17904}, 
+}
+```
