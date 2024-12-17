@@ -157,22 +157,22 @@ performance. This curated dataset contains 2,074,234 frames sampled from 23 dist
 and is publicly available at [huggingface datasets.](https://huggingface.co/datasets/TimJaspersTue/SurgeNetYoutube)
 This datasets is a large part of our SurgeNetXL dataset, which also includes other opensource datasets.
 
-| Procedure-specific subset | Dataset                                                         | Procedure | #videos | #frames   | Public |
-|---------------------------|-----------------------------------------------------------------|-----------|---------|-----------|--------|
-| **SurgeNetCholec**        | Cholec80 ([Twinnanda et al., 2017b](https://link_to_paper))     | Laparoscopic Cholecystectomy | 76 | 179,164   | Yes    |
-|                           | HeiChole ([Maier-Hein et al., 2021](https://link_to_paper))     | Laparoscopic Cholecystectomy | 30 | 53,427    | Yes    |
-|                           | hSDB-Chole ([Yoon et al., 2021](https://link_to_paper))         | Laparoscopic Cholecystectomy | 24 | 18,064    | Yes    |
-| **SurgeNetRAMIE**         | RAMIE-UMCU                                                      | RA Esophagectomy | 28 | 377,287   | No     |
-| **SurgeNetRARP**          | ESAD [Bawa et al., 2021](https://link_to_paper)                 | RA Esophagectomy | 28 | 47,282    | Yes    |
-|                           | PSI-AVA [Valderrama et al., 2022](https://link_to_paper)        | RA Prostatectomy | 8 | 73,618    | Yes    |
-|                           | RARP-AvL                                                        | RA Prostatectomy | 8 | 261,516   | No     |
-| **Others**                | DSAD ([Carstens et al., 2023](https://link_to_paper))           | RA Rectal Resection/Extirpation | 32 | 14,623    | Yes    |
-|                           | GLENDA ([Leibetseder et al., 2020](https://link_to_paper))      | Gynecologic Laparoscopy | 400 | 25,682    | Yes    |
-|                           | LapGyn4 ([Leibetseder et al., 2018](https://link_to_paper))     | Gynecologic Laparoscopy | 500 | 59,616    | Yes    |
-|                           | MultiBypass140 ([Lavanchy et al., 2024](https://link_to_paper)) | Laparoscopic Gastric Bypass Surgery | 140 | 749,419   | Yes    |
-|                           | hSDB-Gastric ([Yoon et al., 2021](https://link_to_paper))       | RA Gastrectomy | 24 | 35,576    | Yes    |
-|                           | SurgToolLoc2022 ([Zia et al., 2023](https://link_to_paper))     | 11 different RA porcine procedures | N/A | 741,516   | Yes    |
-|                           | YouTube [ours](https://link_to_paper)                           | 23 identified procedures | 3,253 | 2,074,234 | Yes    |
+| Procedure-specific subset | Dataset                                                        | Procedure | #videos | #frames   | Public |
+|---------------------------|----------------------------------------------------------------|-----------|---------|-----------|--------|
+| **SurgeNetCholec**        | Cholec80 ([Twinnanda et al., 2017b](https://arxiv.org/abs/1602.03012))    | Laparoscopic Cholecystectomy | 76 | 179,164   | Yes    |
+|                           | HeiChole ([Maier-Hein et al., 2021](https://www.synapse.org/Synapse:syn25101790/wiki/608802))    | Laparoscopic Cholecystectomy | 30 | 53,427    | Yes    |
+|                           | hSDB-Chole ([Yoon et al., 2021](https://arxiv.org/abs/2110.12555))         | Laparoscopic Cholecystectomy | 24 | 18,064    | Yes    |
+| **SurgeNetRAMIE**         | RAMIE-UMCU                                                     | RA Esophagectomy | 28 | 377,287   | No     |
+| **SurgeNetRARP**          | ESAD [Bawa et al., 2021](https://arxiv.org/abs/2006.07164)                | RA Esophagectomy | 28 | 47,282    | Yes    |
+|                           | PSI-AVA [Valderrama et al., 2022](https://arxiv.org/abs/2212.04582)       | RA Prostatectomy | 8 | 73,618    | Yes    |
+|                           | RARP-AvL                                                       | RA Prostatectomy | 8 | 261,516   | No     |
+| **Others**                | DSAD ([Carstens et al., 2023](https://www.nature.com/articles/s41597-022-01719-2))          | RA Rectal Resection/Extirpation | 32 | 14,623    | Yes    |
+|                           | GLENDA ([Leibetseder et al., 2020](https://link.springer.com/chapter/10.1007/978-3-030-37734-2_36))     | Gynecologic Laparoscopy | 400 | 25,682    | Yes    |
+|                           | LapGyn4 ([Leibetseder et al., 2018](https://dl.acm.org/doi/10.1145/3204949.3208127))    | Gynecologic Laparoscopy | 500 | 59,616    | Yes    |
+|                           | MultiBypass140 ([Lavanchy et al., 2024](https://github.com/CAMMA-public/MultiBypass140)) | Laparoscopic Gastric Bypass Surgery | 140 | 749,419   | Yes    |
+|                           | hSDB-Gastric ([Yoon et al., 2021](https://arxiv.org/abs/2110.12555))      | RA Gastrectomy | 24 | 35,576    | Yes    |
+|                           | SurgToolLoc2022 ([Zia et al., 2023](https://arxiv.org/abs/2305.07152))    | 11 different RA porcine procedures | N/A | 741,516   | Yes    |
+|                           | YouTube [ours](https://huggingface.co/datasets/TimJaspersTue/SurgeNetYoutube)                          | 23 identified procedures | 3,253 | 2,074,234 | Yes    |
 
 | SurgeNetXL variations | Dataset | Procedure | #videos | #frames | Public |
 |-----------------------|---------|-----------|---------|---------|--------|
@@ -191,17 +191,10 @@ If you find our work useful in your research please consider citing our paper:
 </div>
 
 ```bibtex
-@inbook{Jaspers2025,
+@msc{Jaspers2025,
    title={Scaling up self-supervised learning for improved surgical foundation models},
-   ISBN={9783031737480},
-   ISSN={1611-3349},
-   url={http://dx.doi.org/10.1007/978-3-031-73748-0_5},
-   DOI={10.1007/978-3-031-73748-0_5},
-   booktitle={Data Engineering in Medical Imaging},
-   publisher={Springer Nature Switzerland},
-   author={Jaspers, Tim J. M. and de Jong, Ronald L. P. D. and Al Khalil, Yasmina and Zeelenberg, Tijn and Kusters, Carolus H. J. and Li, Yiping and van Jaarsveld, Romy C. and Bakker, Franciscus H. A. and Ruurda, Jelle P. and Brinkman, Willem M. and De With, Peter H. N. and van der Sommen, Fons},
-   year={2024},
-   month=oct, pages={43–53} }
+   year={2025}
+    }
 ```
 
 ```bibtex
