@@ -112,6 +112,9 @@ introduced this in the following [paper](https://). All model weights can be dow
 
 ## Loading Models
 The weights from the teacher network can be used to initialize either your classification or segmentation model using the following code snippet: 
+</div>
+
+
 ```python
 import torch
 from metaformer import caformer_s18, MetaFormerFPN
@@ -144,6 +147,8 @@ classification_model = pvt_v2_b2(num_classes=12, pretrained_weights=urls['SurgeN
 segmentation_model = PVTV2FPN(num_classes=12, pretrained_weights=urls['SurgeNet-PVTv2'])
 
 ```
+
+<div align="center">
 Note: If your want a different version of SurgeNet weights (e.g. SurgeNet-Small), you can replace the `pretrained_weights` argument with the desired url (leave the `pretrained` argument as it is).
 
 ## Surgical Youtube Dataset
@@ -183,6 +188,7 @@ We have used the code of Schmidgall et al. (2024) to obtain the youtube videos, 
 
 ## Citation
 If you find our work useful in your research please consider citing our paper:
+</div>
 
 ```bibtex
 @inbook{Jaspers2025,
@@ -212,4 +218,3 @@ If you find our work useful in your research please consider citing our paper:
    month=oct, pages={43–53} }
 ```
 
-</div>
