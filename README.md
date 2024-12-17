@@ -176,11 +176,6 @@ This datasets is a large part of our SurgeNetXL dataset, which also includes oth
 | **SurgeNet**          | All of the above (excluding YouTube & RA Esophagectomy) | All of the above (excluding YouTube & RA Esophagectomy) | \>1345  | 2,636,790 | Partly |
 | **SurgeNetXL**        | All of the above | All of the above | \>4598  | 4,711,024 | Partly |
 
-**Notes:**
-- "RA" stands for robotic-assisted.
-- For datasets that are marked as "Partly", some subsets are publicly available, while others are private.
-
-
 ## Acknowledgements
 Our implementation of the feature pyramid network is based on the [pytorch segmentation models](https://segmentation-modelspytorch.readthedocs.io/en/latest/) library.
 Pretraining on SurgeNet was performed using the code provided with the [DINO](https://github.com/facebookresearch/dino) publication.
