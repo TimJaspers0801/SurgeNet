@@ -155,12 +155,34 @@ performance. This curated dataset contains 2,074,234 frames sampled from 23 dist
 and is publicly available at [huggingface datasets.](https://huggingface.co/datasets/TimJaspersTue/SurgeNetYoutube)
 This datasets is a large part of our SurgeNetXL dataset, which also includes other opensource datasets.
 
-<div style="text-align: center; margin-top: 20px;">
-    <img src="figures/SurgeNetXL.png" alt="Fig 3" width="1200">
-    <p><strong>Table 1:</strong> SurgeNetXL consists of over 4.7 million frames, the majority of which are publicly available. SurgeNet includes more than 2.6 million frames collected
-from seven distinct surgical procedures. The YouTube dataset, including over 2 million frames, is also made publicly available. ”RA” refers to robot-assisted and
-”partly” indicates the dataset comprises both public and non-public datasets.</p>
-</div>
+| Procedure-specific subset | Dataset                                                         | Procedure | #videos | #frames   | Public |
+|---------------------------|-----------------------------------------------------------------|-----------|---------|-----------|--------|
+| **SurgeNetCholec**        | Cholec80 ([Twinnanda et al., 2017b](https://link_to_paper))     | Laparoscopic Cholecystectomy | 76 | 179,164   | Yes    |
+|                           | HeiChole ([Maier-Hein et al., 2021](https://link_to_paper))     | Laparoscopic Cholecystectomy | 30 | 53,427    | Yes    |
+|                           | hSDB-Chole ([Yoon et al., 2021](https://link_to_paper))         | Laparoscopic Cholecystectomy | 24 | 18,064    | Yes    |
+| **SurgeNetRAMIE**         | RAMIE-UMCU                                                      | RA Esophagectomy | 28 | 377,287   | No     |
+| **SurgeNetRARP**          | ESAD [Bawa et al., 2021](https://link_to_paper)                 | RA Esophagectomy | 28 | 47,282    | Yes    |
+|                           | PSI-AVA [Valderrama et al., 2022](https://link_to_paper)        | RA Prostatectomy | 8 | 73,618    | Yes    |
+|                           | RARP-AvL                                                        | RA Prostatectomy | 8 | 261,516   | No     |
+| **Others**                | DSAD ([Carstens et al., 2023](https://link_to_paper))           | RA Rectal Resection/Extirpation | 32 | 14,623    | Yes    |
+|                           | GLENDA ([Leibetseder et al., 2020](https://link_to_paper))      | Gynecologic Laparoscopy | 400 | 25,682    | Yes    |
+|                           | LapGyn4 ([Leibetseder et al., 2018](https://link_to_paper))     | Gynecologic Laparoscopy | 500 | 59,616    | Yes    |
+|                           | MultiBypass140 ([Lavanchy et al., 2024](https://link_to_paper)) | Laparoscopic Gastric Bypass Surgery | 140 | 749,419   | Yes    |
+|                           | hSDB-Gastric ([Yoon et al., 2021](https://link_to_paper))       | RA Gastrectomy | 24 | 35,576    | Yes    |
+|                           | SurgToolLoc2022 ([Zia et al., 2023](https://link_to_paper))     | 11 different RA porcine procedures | N/A | 741,516   | Yes    |
+|                           | YouTube [ours](https://link_to_paper)                           | 23 identified procedures | 3,253 | 2,074,234 | Yes    |
+
+| SurgeNetXL variations | Dataset | Procedure | #videos | #frames | Public |
+|-----------------------|---------|-----------|---------|---------|--------|
+| **SurgeNetSmall**     | 10% of the above (excluding YouTube) | All of the above (excluding YouTube) | \>1345  | 263,679 | Partly |
+| **SurgeNetPublic**    | All public datasets (excluding YouTube) | All of the above (excluding YouTube) | \>1238  | 1,997,987 | Yes    |
+| **SurgeNet**          | All of the above (excluding YouTube & RA Esophagectomy) | All of the above (excluding YouTube & RA Esophagectomy) | \>1345  | 2,636,790 | Partly |
+| **SurgeNetXL**        | All of the above | All of the above | \>4598  | 4,711,024 | Partly |
+
+**Notes:**
+- "RA" stands for robotic-assisted.
+- For datasets that are marked as "Partly", some subsets are publicly available, while others are private.
+
 
 ## Acknowledgements
 Our implementation of the feature pyramid network is based on the [pytorch segmentation models](https://segmentation-modelspytorch.readthedocs.io/en/latest/) library.
