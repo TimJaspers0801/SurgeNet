@@ -5,7 +5,7 @@
 
 <h3>Scaling up self-supervised learning for improved surgical foundation models</h3>
 
-[Tim J.M. Jaspers](https://timjaspers0801.github.io/)<sup>1* :email:</sup>, [Ronald L.P.D. de Jong](https://scholar.google.com/citations?user=We226GgAAAAJ&hl=en)<sup>2*</sup>,
+[Tim J.M. Jaspers](https://timjaspers0801.github.io/)<sup>1 :email:</sup>, [Ronald L.P.D. de Jong](https://scholar.google.com/citations?user=We226GgAAAAJ&hl=en)<sup>2*</sup>,
 [Yiping Li](https://research.tue.nl/nl/persons/yiping-li/publications/)<sup>2</sup>, [Carolus H.J. Kusters](https://chjkusters.github.io/)<sup>1</sup>, Franciscus H.A. Bakker<sup>5</sup>,
 Romy C. van Jaarsveld<sup>3</sup>, Gino M. Kuipers<sup>3</sup>, Richard<sup>3</sup>, Jelle P. Ruurda<sup>3</sup>, 
 Willem M. Brinkman<sup>4</sup>, Josien P.W. Pluim<sup>2</sup>,
@@ -24,7 +24,7 @@ Peter H.N. de With<sup>1</sup>, Marcel Breeuwer<sup>2</sup>, [Yasmina Al Khalil]
 
 <h3> Exploring the Effect of Dataset Diversity in Self-Supervised Learning for Surgical Computer Vision</h3>
 
-[Tim J.M. Jaspers](https://timjaspers0801.github.io/)<sup>1:email:</sup>, [Ronald L.P.D. de Jong](https://scholar.google.com/citations?user=We226GgAAAAJ&hl=en)<sup>2</sup>,
+[Tim J.M. Jaspers](https://timjaspers0801.github.io/)<sup>1* :email:</sup>, [Ronald L.P.D. de Jong](https://scholar.google.com/citations?user=We226GgAAAAJ&hl=en)<sup>2</sup>,
  [Yasmina Al Khalil](https://scholar.google.com/citations?user=m6co7N0AAAAJ&hl=en)<sup>2</sup>, Tijn Zeelenberg <sup>1</sup>, [Carolus H.J. Kusters](https://chjkusters.github.io/)<sup>1</sup>, Franciscus H.A. Bakker<sup>5</sup>,
 [Yiping Li](https://research.tue.nl/nl/persons/yiping-li/publications/)<sup>2</sup>, Romy C. van Jaarsveld<sup>3</sup>, Jelle P. Ruurda<sup>3</sup>, Willem M. Brinkman<sup>4</sup>,
 Peter H.N. de With<sup>1</sup>, [Fons van der Sommen](https://scholar.google.com/citations?user=qFiLkCAAAAAJ&hl=en)<sup>1</sup>,
