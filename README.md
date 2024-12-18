@@ -68,7 +68,7 @@ across diverse surgical tasks and procedures. These results demonstrate the mode
 performance on a variety of downstream tasks, reflecting its versatility and robustness in handling
 datasets from multiple surgical procedures.
 
-Figure 1 and Figure 2 illustrate comparative rankings of our model against existing benchmarks,
+Figure 1 and Figure 2 illustrate comparative rankings of our model against existing foundation models,
 highlighting its superior generalization capabilities across datasets. Figure 3 provides a t-SNE visualization,
 showcasing the clear cluster separation per specific dataset achieved by the model’s feature embeddings, 
 further emphasizing its effectiveness in capturing meaningful representations.
