@@ -42,7 +42,7 @@ Peter H.N. de With<sup>1</sup>, [Fons van der Sommen](https://scholar.google.com
 
 
 
-## Abstract
+<h1>Abstract</h1>
 Foundation models have revolutionized computer vision by achieving state-of-the-art
 performance across diverse tasks through large-scale pretraining on extensive datasets.
 However, their application in surgical computer vision has been limited. This study
@@ -62,7 +62,7 @@ pave the way for improved generalizability and robustness in data-scarce scenari
 a comprehensive framework for future research in this domain.
 
 
-## Results
+<h1>Results</h1>
 The following figures are from our publications, showcasing the performance of our introduced foundation model
 across diverse surgical tasks and procedures. These results demonstrate the model’s state-of-the-art
 performance on a variety of downstream tasks, reflecting its versatility and robustness in handling
@@ -93,7 +93,7 @@ further emphasizing its effectiveness in capturing meaningful representations.
 </div>
 
 
-## Models
+<h1>Models</h1>
 The models used in this study are based on the [MetaFormer](https://arxiv.org/abs/2210.13452) architecture. The models are trained using a self-supervised learning
 approach on the SurgeNetXL dataset and its variations, 
 introduced this in the following [paper](https://). All model weights can be downloaded from the table below.
@@ -110,7 +110,7 @@ introduced this in the following [paper](https://). All model weights can be dow
 | SurgeNet        | ConvNextv2 | 50     | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_ConvNextv2_checkpoint_epoch0050_teacher.pth?download=true) | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_ConvNextv2_checkpoint0050.pth?download=true) |
 | SurgeNet        | PVTv2      | 50     | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_PVTv2_checkpoint_epoch0050_teacher.pth?download=true)      | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_PVTv2_checkpoint0050.pth?download=true)      |
 
-## Loading Models
+<h1>Loading Models</h1>
 The weights from the teacher network can be used to initialize either your classification or segmentation model using the following code snippet: 
 </div>
 
@@ -151,7 +151,7 @@ segmentation_model = PVTV2FPN(num_classes=12, pretrained_weights=urls['SurgeNet-
 <div align="center">
 Note: If your want a different version of SurgeNet weights (e.g. SurgeNet-Small), you can replace the `pretrained_weights` argument with the desired url (leave the `pretrained` argument as it is).
 
-## Surgical Youtube Dataset
+<h1>Surgical Youtube Dataset</h1>
 A key contribution of our research is the Surgical YouTube dataset, which enhanced our foundation model's
 performance. This curated dataset contains 2,074,234 frames sampled from 23 distinct surgical procedures
 and is publicly available at [huggingface datasets.](https://huggingface.co/datasets/TimJaspersTue/SurgeNetYoutube)
@@ -181,12 +181,12 @@ This datasets is a large part of our SurgeNetXL dataset, which also includes oth
 | **SurgeNet**          | All of the above (excluding YouTube)                       | All of the above (excluding YouTube)                    | \>1345  | 2,636,790 | Partly |
 | **SurgeNetXL**        | All of the above                                           | All of the above                                        | \>4598  | 4,711,024 | Partly |
 
-## Acknowledgements
+<h1>Acknowledgements</h1>
 Our implementation of the feature pyramid network is based on the [pytorch segmentation models](https://segmentation-modelspytorch.readthedocs.io/en/latest/) library.
 Pretraining on SurgeNet was performed using the code provided with the [DINO](https://github.com/facebookresearch/dino) publication.
 We have used the code of Schmidgall et al. (2024) to obtain the youtube videos, this code can be found [here](https://github.com/SamuelSchmidgall/GSViT).
 
-## Citation
+<h1>Citation</h1>
 If you find our work useful in your research please consider citing our paper:
 </div>
 
