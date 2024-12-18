@@ -46,20 +46,20 @@ Peter H.N. de With<sup>1</sup>, [Fons van der Sommen](https://scholar.google.com
 Foundation models have revolutionized computer vision by achieving state-of-the-art
 performance across diverse tasks through large-scale pretraining on extensive datasets.
 However, their application in surgical computer vision has been limited. This study
-addresses this gap by introducing SurgeNetXL, a novel surgical foundation model
-that sets a new benchmark in surgical computer vision. Trained on the largest reported surgical dataset to date,
-comprising over 4.7 million video frames, SurgeNetXL
-achieves consistent top-tier performance across six datasets spanning four surgical
-procedures and three tasks, including semantic segmentation, phase recognition, and
-critical view of safety (CVS) classification. Compared to the best-performing surgical
-foundation models, SurgeNetXL shows mean improvements of 0.26%, 8.95%,
-and 12.6% for semantic segmentation, phase recognition, and CVS classification, respectively. 
-Additionally, SurgeNetXL outperforms the best-performing ImageNet-based variants
-by 10.3%, 4.0%, and 1.6% in the respective tasks. In addition to
-advancing model performance, this work provides key insights into scaling pretraining datasets,
-extending training durations, and optimizing model architectures specifically for surgical computer vision.
-These findings pave the way for improved generalizability and robustness in data-scarce scenarios,
-offering a comprehensive framework for future research in this domain.
+addresses this gap by introducing SurgeNetXL, a novel surgical foundation model that
+sets a new benchmark in surgical computer vision. Trained on the largest reported surgical
+dataset to date, comprising over 4.7 million video frames, SurgeNetXL achieves
+consistent top-tier performance across six datasets spanning four surgical procedures
+and three tasks, including semantic segmentation, phase recognition, and critical view
+of safety (CVS) classification. Compared to the best-performing surgical foundation
+models, SurgeNetXL shows mean improvements of 2.4, 8.95, and 12.6% for semantic segmentation,
+phase recognition, and CVS classification, respectively. Additionally,
+SurgeNetXL outperforms the best-performing ImageNet-based variants by 14.4, 4.0,
+and 1.6% in the respective tasks. In addition to advancing model performance, this work
+provides key insights into scaling pretraining datasets, extending training durations, and
+optimizing model architectures specifically for surgical computer vision. These findings
+pave the way for improved generalizability and robustness in data-scarce scenarios, offering
+a comprehensive framework for future research in this domain.
 
 
 ## Results
