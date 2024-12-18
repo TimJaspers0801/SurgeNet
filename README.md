@@ -174,12 +174,12 @@ This datasets is a large part of our SurgeNetXL dataset, which also includes oth
 |                           | SurgToolLoc2022 ([Zia et al., 2023](https://arxiv.org/abs/2305.07152))    | 11 different RA porcine procedures | N/A | 741,516   | Yes    |
 |                           | YouTube [ours](https://huggingface.co/datasets/TimJaspersTue/SurgeNetYoutube)                          | 23 identified procedures | 3,253 | 2,074,234 | Yes    |
 
-| SurgeNetXL variations | Dataset | Procedure | #videos | #frames | Public |
-|-----------------------|---------|-----------|---------|---------|--------|
-| **SurgeNetSmall**     | 10% of the above (excluding YouTube) | All of the above (excluding YouTube) | \>1345  | 263,679 | Partly |
-| **SurgeNetPublic**    | All public datasets (excluding YouTube) | All of the above (excluding YouTube) | \>1238  | 1,997,987 | Yes    |
-| **SurgeNet**          | All of the above (excluding YouTube & RA Esophagectomy) | All of the above (excluding YouTube & RA Esophagectomy) | \>1345  | 2,636,790 | Partly |
-| **SurgeNetXL**        | All of the above | All of the above | \>4598  | 4,711,024 | Partly |
+| SurgeNetXL variations | Dataset                                                    | Procedure                                               | #videos | #frames | Public |
+|-----------------------|------------------------------------------------------------|---------------------------------------------------------|---------|---------|--------|
+| **SurgeNetSmall**     | 10% of the above (excluding YouTube)                       | All of the above (excluding YouTube)                    | \>1345  | 263,679 | Partly |
+| **SurgeNetPublic**    | All public datasets (excluding YouTube & private datasets) | All of the above (excluding YouTube & RA Esophagectomy) | \>1238  | 1,997,987 | Yes    |
+| **SurgeNet**          | All of the above (excluding YouTube)                       | All of the above (excluding YouTube)                    | \>1345  | 2,636,790 | Partly |
+| **SurgeNetXL**        | All of the above                                           | All of the above                                        | \>4598  | 4,711,024 | Partly |
 
 ## Acknowledgements
 Our implementation of the feature pyramid network is based on the [pytorch segmentation models](https://segmentation-modelspytorch.readthedocs.io/en/latest/) library.
