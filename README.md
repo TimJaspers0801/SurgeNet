@@ -115,8 +115,7 @@ introduced this in the following [paper](https://). All model weights can be dow
 
 <h1>Installation using Conda</h1>
 <div align="left">
-
-If you don't have Anaconda, download it from the following link: [Anaconda Download](https://www.anaconda.com/download)
+We use Anaconda for installation, but you are free to use other methods, as long as the Python and timm versions are correct. If you don't have Anaconda, download it from the following link: [Anaconda Download](https://www.anaconda.com/download)
 
 Create a Conda environment:
 
@@ -149,6 +148,7 @@ cd SurgeNet
 ```
 
 Load our models by running `load_models.py` (see explanation below).
+
 </div>
 
 <h1>Loading Models</h1>
