@@ -114,10 +114,20 @@ introduced this in the following [paper](https://). All model weights can be dow
 | SurgeNet        | PVTv2      | 50     | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_PVTv2_checkpoint_epoch0050_teacher.pth?download=true)      | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_PVTv2_checkpoint0050.pth?download=true)      |
 
 <h1>Installation</h1>
+<div align="left">
 Clone our repository:
-```python
+
+```
 git clone https://github.com/TimJaspers0801/SurgeNet.git
 ```
+
+Navigate to the folder:
+
+```
+cd SurgeNet
+```
+
+Load our models using the explanation below.
 
 <h1>Loading Models</h1>
 
