@@ -116,6 +116,8 @@ introduced this in the following [paper](https://). All model weights can be dow
 <h1>Installation using Conda</h1>
 <div align="left">
 
+If you don't have Anaconda, download it from the following link: [Anaconda Download](https://www.anaconda.com/download)
+
 Create a Conda environment:
 
 ```
