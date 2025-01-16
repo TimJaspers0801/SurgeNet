@@ -113,6 +113,12 @@ introduced this in the following [paper](https://). All model weights can be dow
 | SurgeNet        | ConvNextv2 | 50     | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_ConvNextv2_checkpoint_epoch0050_teacher.pth?download=true) | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_ConvNextv2_checkpoint0050.pth?download=true) |
 | SurgeNet        | PVTv2      | 50     | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_PVTv2_checkpoint_epoch0050_teacher.pth?download=true)      | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_PVTv2_checkpoint0050.pth?download=true)      |
 
+<h1>Installation</h1>
+Clone our repository:
+```
+git clone https://github.com/TimJaspers0801/SurgeNet.git
+```
+
 <h1>Loading Models</h1>
 
 The weights from the teacher network can be used to initialize either your classification or segmentation model using the following code snippet: 
