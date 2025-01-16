@@ -151,7 +151,7 @@ Load our models using the explanation below.
 
 <h1>Loading Models</h1>
 
-The weights from the teacher network can be used to initialize either your classification or segmentation model using the following code snippet: 
+The weights from the teacher network can be used to initialize either your classification or segmentation model. This can be done by running `load_models.py`, which contains the following code: 
 </div>
 
 
