@@ -146,7 +146,7 @@ Navigate to the folder:
 cd SurgeNet
 ```
 
-Load our models using the explanation below.
+Load our models by running `load_models.py` (see explanation below).
 </div>
 
 <h1>Loading Models</h1>
