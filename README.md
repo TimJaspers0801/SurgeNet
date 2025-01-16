@@ -115,7 +115,7 @@ introduced this in the following [paper](https://). All model weights can be dow
 
 <h1>Installation</h1>
 Clone our repository:
-```
+```python
 git clone https://github.com/TimJaspers0801/SurgeNet.git
 ```
 
