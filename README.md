@@ -115,6 +115,16 @@ introduced this in the following [paper](https://). All model weights can be dow
 
 <h1>Installation</h1>
 <div align="left">
+
+Requirements:
+- Python >= 3.8
+
+Install timm using pip:
+
+```
+pip install timm == 1.0.13
+```
+ 
 Clone our repository:
 
 ```
@@ -128,6 +138,7 @@ cd SurgeNet
 ```
 
 Load our models using the explanation below.
+</div>
 
 <h1>Loading Models</h1>
 
