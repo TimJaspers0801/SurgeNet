@@ -113,16 +113,25 @@ introduced this in the following [paper](https://). All model weights can be dow
 | SurgeNet        | ConvNextv2 | 50     | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_ConvNextv2_checkpoint_epoch0050_teacher.pth?download=true) | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_ConvNextv2_checkpoint0050.pth?download=true) |
 | SurgeNet        | PVTv2      | 50     | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_PVTv2_checkpoint_epoch0050_teacher.pth?download=true)      | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_PVTv2_checkpoint0050.pth?download=true)      |
 
-<h1>Installation</h1>
+<h1>Installation using Conda</h1>
 <div align="left">
 
-Requirements:
-- Python >= 3.8
+Create a Conda environment:
+
+```
+conda create --name SurgeNet python=3.8
+```
+
+Activate your Conda environment:
+
+```
+conda activate SurgeNet
+```
 
 Install timm using pip:
 
 ```
-pip install timm == 1.0.13
+pip install timm==1.0.13
 ```
  
 Clone our repository:
