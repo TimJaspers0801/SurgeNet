@@ -115,6 +115,7 @@ introduced this in the following [paper](https://). All model weights can be dow
 
 <h1>Installation using Conda</h1>
 <div align="left">
+ 
 We recommend using Anaconda for installation, but you are welcome to use other methods as long as the correct versions of Python and Timm are installed. If you don't have Anaconda, download it here: [Anaconda Download](https://www.anaconda.com/download)
 
 Create a Conda environment:
