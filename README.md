@@ -113,9 +113,48 @@ introduced this in the following [paper](https://). All model weights can be dow
 | SurgeNet        | ConvNextv2 | 50     | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_ConvNextv2_checkpoint_epoch0050_teacher.pth?download=true) | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_ConvNextv2_checkpoint0050.pth?download=true) |
 | SurgeNet        | PVTv2      | 50     | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_PVTv2_checkpoint_epoch0050_teacher.pth?download=true)      | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_PVTv2_checkpoint0050.pth?download=true)      |
 
+<h1>Installation using Conda</h1>
+<div align="left">
+ 
+We recommend using Anaconda for installation, but you are welcome to use other methods as long as the correct versions of Python and Timm are installed. If you don't have Anaconda, download it here: [Anaconda Download](https://www.anaconda.com/download)
+
+Create a Conda environment:
+
+```
+conda create --name SurgeNet python=3.8
+```
+
+Activate your Conda environment:
+
+```
+conda activate SurgeNet
+```
+
+Install timm using pip:
+
+```
+pip install timm==1.0.13
+```
+ 
+Clone our repository:
+
+```
+git clone https://github.com/TimJaspers0801/SurgeNet.git
+```
+
+Navigate to the folder:
+
+```
+cd SurgeNet
+```
+
+Load our models by running `load_models.py` (see explanation below).
+
+</div>
+
 <h1>Loading Models</h1>
 
-The weights from the teacher network can be used to initialize either your classification or segmentation model using the following code snippet: 
+The weights from the teacher network can be used to initialize either your classification or segmentation model. This can be done by running `load_models.py`, which contains the following code: 
 </div>
 
 
@@ -138,7 +177,7 @@ urls = {
     "SurgeNet-PVTv2": "https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_PVTv2_checkpoint_epoch0050_teacher.pth?download=true",
 }
 
-# Metaformer model
+# CAFormer model
 classification_model = caformer_s18(num_classes=12, pretrained='SurgeNet', pretrained_weights=urls['SurgeNetXL'])
 segmentation_model = MetaFormerFPN(num_classes=12, pretrained='SurgeNet', pretrained_weights=urls['SurgeNetXL'])
 

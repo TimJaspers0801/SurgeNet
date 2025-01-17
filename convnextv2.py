@@ -213,9 +213,6 @@ class ConvNeXtV2(nn.Module):
         # Download the weights using torch.hub
         pretrained_dict = torch.hub.load_state_dict_from_url(url)
 
-        # Remove "model." prefix from the keys in the state_dict
-        pretrained_dict = pretrained_dict["model"]
-
         # remove classification head weights
         pretrained_dict = {k: v for k, v in pretrained_dict.items() if not k.startswith("head.")}
 
