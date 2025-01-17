@@ -20,7 +20,7 @@ Peter H.N. de With<sup>1</sup>, Marcel Breeuwer<sup>2</sup>, [Yasmina Al Khalil]
 <sup>*</sup> Both authors attributed equally \
 (<sup>:email:</sup>) corresponding author
 
-*arxiv* <br /> ([Article](https://doi.org/10.1016/j.media.2024.103348))
+*arxiv* <br /> ([Article](https://arxiv.org/abs/2501.09436))
 
 <h3> Exploring the Effect of Dataset Diversity in Self-Supervised Learning for Surgical Computer Vision</h3>
 
