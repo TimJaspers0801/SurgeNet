@@ -197,10 +197,15 @@ If you find our work useful in your research please consider citing our paper:
 </div>
 
 ```bibtex
-@msc{Jaspers2025,
-   title={Scaling up self-supervised learning for improved surgical foundation models},
-   year={2025}
-    }
+@misc{jaspers2025scalingselfsupervisedlearningimproved,
+      title={Scaling up self-supervised learning for improved surgical foundation models}, 
+      author={Tim J. M. Jaspers and Ronald L. P. D. de Jong and Yiping Li and Carolus H. J. Kusters and Franciscus H. A. Bakker and Romy C. van Jaarsveld and Gino M. Kuiper and Richard van Hillegersberg and Jelle P. Ruurda and Willem M. Brinkman and Josien P. W. Pluim and Peter H. N. de With and Marcel Breeuwer and Yasmina Al Khalil and Fons van der Sommen},
+      year={2025},
+      eprint={2501.09436},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2501.09436}, 
+}
 ```
 
 ```bibtex
