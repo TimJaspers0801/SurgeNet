@@ -198,8 +198,8 @@ Note: If your want a different version of SurgeNet weights (e.g. SurgeNet-Small)
 
 A key contribution of our research is the Surgical YouTube dataset, which enhanced our foundation model's
 performance. This curated dataset contains 2,074,234 frames sampled from 23 distinct surgical procedures
-and is available upon request at [huggingface datasets.](https://huggingface.co/datasets/TimJaspersTue/SurgeNetYoutube)
-This datasets is a large part of our SurgeNetXL dataset, which also includes other opensource datasets.
+and is available upon request at [huggingface datasets.](https://huggingface.co/datasets/TimJaspersTue/SurgeNetYoutube) You can also create this dataset yourself by running `create_SurgeNetXL.py` and using the txt file provided [here](https://tuenl-my.sharepoint.com/:t:/g/personal/t_j_m_jaspers_tue_nl/EQPigVycTddOl3e81sh9dNwBvYHaX85F6mOXd9gcGRlaSA?e=FjCdQm).
+This datasets is a large part of our SurgeNetXL dataset, which also includes other open source datasets.
 
 | Procedure-specific subset | Dataset                                                        | Procedure | #videos | #frames   | Public |
 |---------------------------|----------------------------------------------------------------|-----------|---------|-----------|--------|
