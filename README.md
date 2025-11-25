@@ -233,14 +233,17 @@ If you find our work useful in your research please consider citing our paper:
 </div>
 
 ```bibtex
-@misc{jaspers2025scalingselfsupervisedlearningimproved,
-      title={Scaling up self-supervised learning for improved surgical foundation models}, 
-      author={Tim J. M. Jaspers and Ronald L. P. D. de Jong and Yiping Li and Carolus H. J. Kusters and Franciscus H. A. Bakker and Romy C. van Jaarsveld and Gino M. Kuiper and Richard van Hillegersberg and Jelle P. Ruurda and Willem M. Brinkman and Josien P. W. Pluim and Peter H. N. de With and Marcel Breeuwer and Yasmina Al Khalil and Fons van der Sommen},
-      year={2025},
-      eprint={2501.09436},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2501.09436}, 
+@article{JASPERS2026103873,
+title = {Scaling up self-supervised learning for improved surgical foundation models},
+journal = {Medical Image Analysis},
+volume = {108},
+pages = {103873},
+year = {2026},
+issn = {1361-8415},
+doi = {https://doi.org/10.1016/j.media.2025.103873},
+url = {https://www.sciencedirect.com/science/article/pii/S1361841525004190},
+author = {Tim J.M. Jaspers and Ronald L.P.D. {de Jong} and Yiping Li and Carolus H.J. Kusters and Franciscus H.A. Bakker and Romy C. {van Jaarsveld} and Gino M. Kuiper and Richard {van Hillegersberg} and Jelle P. Ruurda and Willem M. Brinkman and Josien P.W. Pluim and Peter H.N. {de With} and Marcel Breeuwer and Yasmina {Al Khalil} and Fons {van der Sommen}},
+keywords = {Self-supervised learning, SurgeNet, Surgical computer vision, Transfer learning},
 }
 ```
 
