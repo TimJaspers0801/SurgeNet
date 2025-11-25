@@ -242,7 +242,7 @@ year = {2026},
 issn = {1361-8415},
 doi = {https://doi.org/10.1016/j.media.2025.103873},
 url = {https://www.sciencedirect.com/science/article/pii/S1361841525004190},
-author = {Tim J.M. Jaspers and Ronald L.P.D. {de Jong} and Yiping Li and Carolus H.J. Kusters and Franciscus H.A. Bakker and Romy C. {van Jaarsveld} and Gino M. Kuiper and Richard {van Hillegersberg} and Jelle P. Ruurda and Willem M. Brinkman and Josien P.W. Pluim and Peter H.N. {de With} and Marcel Breeuwer and Yasmina {Al Khalil} and Fons {van der Sommen}},
+author = {Tim J.M. Jaspers and Ronald L.P.D. de Jong and Yiping Li and Carolus H.J. Kusters and Franciscus H.A. Bakker and Romy C. van Jaarsveld and Gino M. Kuiper and Richard van Hillegersberg and Jelle P. Ruurda and Willem M. Brinkman and Josien P.W. Pluim and Peter H.N. de With and Marcel Breeuwer and Yasmina Al Khalil and Fons van der Sommen},
 keywords = {Self-supervised learning, SurgeNet, Surgical computer vision, Transfer learning},
 }
 ```
