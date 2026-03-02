@@ -22,6 +22,18 @@ Peter H.N. de With<sup>1</sup>, Marcel Breeuwer<sup>2</sup>, [Yasmina Al Khalil]
 
 *Medical Image Analysis* <br /> ([Article](https://www.sciencedirect.com/science/article/pii/S1361841525004190))
 
+<h3>Towards Effective Surgical Representation Learning with DINO Models</h3>
+
+[Ronald L.P.D. de Jong](https://scholar.google.com/citations?user=We226GgAAAAJ&hl=en)<sup>2* :email:</sup>, [Yiping Li](https://research.tue.nl/nl/persons/yiping-li/publications/)<sup>2</sup>, [Tim J.M. Jaspers](https://timjaspers0801.github.io/)<sup>1</sup>, Romy C. van Jaarsveld<sup>3</sup>, Gino M. Kuiper<sup>3</sup>, Franco Badaloni<sup>2</sup>, Richard van Hillegersberg<sup>3</sup>, Jelle P. Ruurda<sup>3</sup>, [Fons van der Sommen](https://scholar.google.com/citations?user=qFiLkCAAAAAJ&hl=en)<sup>1</sup>, Josien P.W. Pluim<sup>2</sup>, Marcel Breeuwer<sup>2</sup>
+
+<sup>1</sup> Department of Electrical Engineering, Video Coding & Architectures, Eindhoven University of Technology \
+<sup>2</sup> Department of Biomedical Engineering, Medical Image Analysis, Eindhoven University of Technology, Eindhoven, The Netherlands \
+<sup>3</sup> Department of Surgery, University Medical Center Utrecht, Utrecht, The Netherlands
+
+(<sup>:email:</sup>) corresponding author
+
+*OpenReview* <br /> ([Article](https://openreview.net/forum?id=6FoIDPKzRV))
+
 <h3> Exploring the Effect of Dataset Diversity in Self-Supervised Learning for Surgical Computer Vision</h3>
 
 [Tim J.M. Jaspers](https://timjaspers0801.github.io/)<sup>1 :email:</sup>, [Ronald L.P.D. de Jong](https://scholar.google.com/citations?user=We226GgAAAAJ&hl=en)<sup>2</sup>,
