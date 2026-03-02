@@ -274,6 +274,16 @@ author = {Tim J.M. Jaspers and Ronald L.P.D. de Jong and Yiping Li and Carolus H
 keywords = {Self-supervised learning, SurgeNet, Surgical computer vision, Transfer learning},
 }
 ```
+```bibtex
+@inproceedings{
+  jong2026towards,
+  title={Towards Effective Surgical Representation Learning with {DINO} Models},
+  author={Ronald L.P.D. de Jong and Yiping Li and Tim J. M. Jaspers and Romy C. van Jaarsveld and Gino M. Kuiper and Franco Badaloni and Richard van Hillegersberg and Jelle P. Ruurda and Fons van der Sommen and Josien P.W. Pluim and Marcel Breeuwer},
+  booktitle={Medical Imaging with Deep Learning},
+  year={2026},
+  url={https://openreview.net/forum?id=6FoIDPKzRV}
+}
+```
 
 ```bibtex
 @inbook{Jaspers2024,
