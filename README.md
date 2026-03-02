@@ -207,6 +207,7 @@ segmentation_model = PVTV2FPN(num_classes=12, pretrained_weights=urls['SurgeNet-
 <div align="center">
 Note: If your want a different version of SurgeNet weights (e.g. SurgeNet-Small), you can replace the `pretrained_weights` argument with the desired url (leave the `pretrained` argument as it is).
 
+
 Additionally, our latest DINOv1-v3 ViT backbones can be loaded using `load_vit_models.py` (more info on the DINOv1-v3 backbones can be found [here](https://github.com/rlpddejong/SurgeNetDINO)). 
 
 <h1>Surgical Youtube Dataset</h1>
