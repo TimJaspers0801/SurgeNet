@@ -113,6 +113,19 @@ introduced this in the following [paper](https://). All model weights can be dow
 | SurgeNet        | ConvNextv2 | 50     | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_ConvNextv2_checkpoint_epoch0050_teacher.pth?download=true) | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_ConvNextv2_checkpoint0050.pth?download=true) |
 | SurgeNet        | PVTv2      | 50     | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_PVTv2_checkpoint_epoch0050_teacher.pth?download=true)      | [Download](https://huggingface.co/TimJaspersTue/SurgeNetModels/resolve/main/SurgeNet_PVTv2_checkpoint0050.pth?download=true)      |
 
+Additionally, our latest DINOv1-v3 ViT backbones can be downloaded here (more info on the DINOv1-v3 backbones can be found [here](https://github.com/rlpddejong/SurgeNetDINO)). 
+
+| Model   | Variant | Download |
+|---------|---------|----------|
+| **DINOv1** | ViT-s | [Download](https://huggingface.co/rlpddejong/SurgeNetXL_DINOv1-v3/resolve/main/DINOv1_ViTs16_size224_SurgeNetXL.pth?download=true) |
+| **DINOv1** | ViT-b | [Download](https://huggingface.co/rlpddejong/SurgeNetXL_DINOv1-v3/resolve/main/DINOv1_ViTb16_size224_SurgeNetXL.pth?download=true) |
+| **DINOv2** | ViT-s | [Download](https://huggingface.co/rlpddejong/SurgeNetXL_DINOv1-v3/resolve/main/DINOv2_ViTs14_size336_SurgeNetXL.pth?download=true) |
+| **DINOv2** | ViT-b | [Download](https://huggingface.co/rlpddejong/SurgeNetXL_DINOv1-v3/resolve/main/DINOv2_ViTb14_size336_SurgeNetXL.pth?download=true) |
+| **DINOv2** | ViT-l | [Download](https://huggingface.co/rlpddejong/SurgeNetXL_DINOv1-v3/resolve/main/DINOv2_ViTl14_size336_SurgeNetXL.pth?download=true) |
+| **DINOv3** | ViT-s | [Download](https://huggingface.co/rlpddejong/SurgeNetXL_DINOv1-v3/resolve/main/DINOv3_ViTs16_size336_SurgeNetXL.pth?download=true) |
+| **DINOv3** | ViT-b | [Download](https://huggingface.co/rlpddejong/SurgeNetXL_DINOv1-v3/resolve/main/DINOv3_ViTb16_size336_SurgeNetXL.pth?download=true) |
+| **DINOv3** | ViT-l | [Download](https://huggingface.co/rlpddejong/SurgeNetXL_DINOv1-v3/resolve/main/DINOv3_ViTl16_size336_SurgeNetXL.pth?download=true) |
+
 <h1>Installation using Conda</h1>
 <div align="left">
  
@@ -193,6 +206,8 @@ segmentation_model = PVTV2FPN(num_classes=12, pretrained_weights=urls['SurgeNet-
 
 <div align="center">
 Note: If your want a different version of SurgeNet weights (e.g. SurgeNet-Small), you can replace the `pretrained_weights` argument with the desired url (leave the `pretrained` argument as it is).
+
+Additionally, our latest DINOv1-v3 ViT backbones can be loaded using `load_vit_models.py` (more info on the DINOv1-v3 backbones can be found [here](https://github.com/rlpddejong/SurgeNetDINO)). 
 
 <h1>Surgical Youtube Dataset</h1>
 
